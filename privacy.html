@@ -3,365 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - ColorHide: Hide & Seek (Craft Garage)</title>
+    <title>Política de Privacidad - ColorHide: Hide & Seek | Craft Garage</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            600: '#16a34a',
-                            700: '#15803d',
-                            800: '#166534',
-                            900: '#14532d'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 240px;
-            max-height: 280px;
-        }
         @media print {
             .no-print { display: none !important; }
-            body { background: white !important; color: black !important; }
+            body { background: #ffffff !important; color: #000000 !important; }
             .print-full-width { width: 100% !important; max-width: none !important; }
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-200 selection:text-emerald-900">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-slate-200 selection:text-slate-900">
 
-    <!-- Top Navigation Bar -->
-    <header class="bg-slate-900 text-slate-100 border-b border-slate-800 sticky top-0 z-50 no-print shadow-md">
+    <!-- Header Institucional -->
+    <header class="bg-slate-950 text-slate-100 border-b border-slate-800 sticky top-0 z-50 no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-3 hover:opacity-90 transition">
-                <div class="w-9 h-9 rounded-lg bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-lg">
-                    🎨
+                <div class="w-8 h-8 rounded bg-slate-800 border border-slate-700 text-slate-100 flex items-center justify-center font-bold text-sm">
+                    CG
                 </div>
                 <div>
-                    <span class="font-bold text-base tracking-tight block leading-none">ColorHide: Hide & Seek</span>
-                    <span class="text-[11px] text-slate-400 font-medium">Craft Garage &bull; Transparencia Legal</span>
+                    <span class="font-bold text-sm tracking-tight block leading-none text-white">Craft Garage</span>
+                    <span class="text-[11px] text-slate-400 font-normal">ColorHide: Hide & Seek &bull; Marco Legal</span>
                 </div>
             </a>
 
             <div class="flex items-center space-x-3">
-                <a href="index.html" class="text-xs text-slate-300 hover:text-white px-2.5 py-1.5 rounded-lg border border-slate-700 hover:bg-slate-800 transition">
-                    ← Volver al Sitio
+                <a href="index.html" class="text-xs text-slate-300 hover:text-white px-3 py-1.5 rounded border border-slate-700 hover:bg-slate-800 transition">
+                    ← Volver a la portada
                 </a>
-                <button onclick="window.print()" class="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">
-                    <span>🖨️</span>
+                <button onclick="window.print()" class="hidden sm:inline-flex items-center space-x-1 px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium border border-slate-700 transition">
                     <span>Imprimir</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Main Container -->
-    <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+    <!-- Contenedor Principal -->
+    <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
         
-        <!-- Header Document Banner -->
-        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm mb-8">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-slate-100 pb-6">
-                <div>
-                    <div class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-md mb-3 border border-emerald-200">
-                        <span>🛡️</span>
-                        <span>Declaración Oficial de Privacidad</span>
-                    </div>
-                    <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                        Política de Privacidad y Protección de Datos
-                    </h1>
-                    <p class="text-slate-600 text-sm mt-2 max-w-3xl leading-relaxed">
-                        Este documento regula el tratamiento de información en la aplicación móvil <strong>ColorHide: Hide & Seek</strong>, desarrollada por <strong>Craft Garage</strong>. Nuestro principio fundamental es la <strong>minimización absoluta de datos</strong> durante las sesiones multijugador en Red Local (LAN).
-                    </p>
-                </div>
-
-                <!-- Executive Summary Quick Metrics -->
-                <div class="grid grid-cols-2 gap-3 min-w-[240px]">
-                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
-                        <span class="text-xs text-slate-500 font-medium block">Cuentas / Registros</span>
-                        <span class="text-lg font-black text-slate-900">0 Requeridas</span>
-                    </div>
-                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
-                        <span class="text-xs text-slate-500 font-medium block">Servidores Nube</span>
-                        <span class="text-lg font-black text-emerald-600">0% Uso</span>
-                    </div>
-                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
-                        <span class="text-xs text-slate-500 font-medium block">Modo de Red</span>
-                        <span class="text-lg font-black text-blue-600">LAN / Wi-Fi</span>
-                    </div>
-                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
-                        <span class="text-xs text-slate-500 font-medium block">Menores (COPPA)</span>
-                        <span class="text-lg font-black text-slate-900">Cumplimiento</span>
-                    </div>
-                </div>
+        <!-- Encabezado del Documento -->
+        <div class="bg-white rounded-xl p-6 sm:p-10 border border-slate-200 shadow-sm mb-8">
+            <div class="border-b border-slate-100 pb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">
+                    Declaración Oficial de Privacidad y Cumplimiento Normativo
+                </span>
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Política de Privacidad y Tratamiento de Información
+                </h1>
+                <p class="text-slate-600 text-sm mt-3 max-w-4xl leading-relaxed">
+                    El presente instrumento legal regula el tratamiento, almacenamiento y salvaguarda de datos derivado de la instalación y ejecución de la aplicación móvil <strong>ColorHide: Hide & Seek</strong> (en adelante, «el Software»), desarrollada y publicada por <strong>Craft Garage</strong>. Este documento se suscribe en estricto apego al principio de minimización de datos y a las directrices de privacidad por diseño establecidas por los estándares regulatorios aplicables.
+                </p>
             </div>
 
-            <!-- Quick Search Bar -->
-            <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 no-print">
-                <div class="relative w-full sm:w-96">
-                    <input type="text" id="searchClauseInput" onkeyup="filterClauses()" placeholder="🔍 Buscar cláusula (ej. IP, Unity, Permisos, Niños, AdMob)..." class="w-full pl-3 pr-4 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition">
-                </div>
-                <div class="text-xs text-slate-500 font-medium">
-                    Última revisión formal: <span class="font-bold text-slate-700">2026</span>
-                </div>
+            <div class="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-slate-500 gap-2">
+                <div>Última actualización y entrada en vigor: <strong class="text-slate-700 font-semibold">Agosto de 2026</strong></div>
+                <div>Identificador de versión: <strong class="text-slate-700 font-mono">POL-PRIV-CH-V1.0</strong></div>
             </div>
         </div>
 
-        <!-- Content Layout: Sidebar Navigation + Legal Body -->
+        <!-- Cuerpo del Documento -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 print-full-width">
             
-            <!-- Sticky Sidebar Index (TOC) -->
+            <!-- Índice lateral -->
             <aside class="lg:col-span-3 no-print">
-                <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm sticky top-24">
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Índice del Documento</h3>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm sticky top-24">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Cláusulas del Documento</h3>
                     <nav class="space-y-1 text-xs font-medium text-slate-600">
-                        <a href="#sec-1" class="block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition">1. Principio de Minimización</a>
-                        <a href="#sec-2" class="block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition">2. Información Recopilada</a>
-                        <a href="#sec-3" class="block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition">3. Arquitectura de Red (LAN)</a>
-                        <a href="#sec-4" class="block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition">4. Ciclo de Vida de Datos (RAM)</a>
-                        <a href="#sec-5" class="block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition">5. Ficha Data Safety</a>
-                        <a href="#sec-6" class="block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition">6. Permisos del Dispositivo</a>
-                        <a href="#sec-7" class="block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition">7. Publicidad y Terceros</a>
-                        <a href="#sec-8" class="block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition">8. Protección Infantil (COPPA)</a>
-                        <a href="#sec-9" class="block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition">9. Derechos y Eliminación</a>
-                        <a href="#sec-10" class="block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition">10. Contacto Formal</a>
+                        <a href="#art-1" class="block py-1.5 px-2.5 rounded hover:bg-slate-100 hover:text-slate-900 transition">1. Principio Rector de Minimización</a>
+                        <a href="#art-2" class="block py-1.5 px-2.5 rounded hover:bg-slate-100 hover:text-slate-900 transition">2. Datos Técnicos Procesados</a>
+                        <a href="#art-3" class="block py-1.5 px-2.5 rounded hover:bg-slate-100 hover:text-slate-900 transition">3. Arquitectura de Red Local (LAN)</a>
+                        <a href="#art-4" class="block py-1.5 px-2.5 rounded hover:bg-slate-100 hover:text-slate-900 transition">4. Volatilidad en Memoria RAM</a>
+                        <a href="#art-5" class="block py-1.5 px-2.5 rounded hover:bg-slate-100 hover:text-slate-900 transition">5. Matriz Google Play Data Safety</a>
+                        <a href="#art-6" class="block py-1.5 px-2.5 rounded hover:bg-slate-100 hover:text-slate-900 transition">6. Permisos del Sistema Operativo</a>
+                        <a href="#art-7" class="block py-1.5 px-2.5 rounded hover:bg-slate-100 hover:text-slate-900 transition">7. Servicios de Publicidad (AdMob)</a>
+                        <a href="#art-8" class="block py-1.5 px-2.5 rounded hover:bg-slate-100 hover:text-slate-900 transition">8. Protección Infantil (COPPA / GDPR)</a>
+                        <a href="#art-9" class="block py-1.5 px-2.5 rounded hover:bg-slate-100 hover:text-slate-900 transition">9. Derechos del Titular y Supresión</a>
+                        <a href="#art-10" class="block py-1.5 px-2.5 rounded hover:bg-slate-100 hover:text-slate-900 transition">10. Jurisdicción y Contacto</a>
                     </nav>
                 </div>
             </aside>
 
-            <!-- Legal Sections Content -->
-            <main class="lg:col-span-9 space-y-8 print-full-width">
+            <!-- Secciones Legales Formales -->
+            <main class="lg:col-span-9 space-y-6 print-full-width">
 
-                <!-- SECTION 1 -->
-                <section id="sec-1" class="legal-clause bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
-                    <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
-                        <span>1. Principio de Minimización y Filosofía de Privacidad</span>
-                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">CLAUSE-01</span>
+                <!-- ARTICULO 1 -->
+                <section id="art-1" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <h2 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
+                        <span>Cláusula 1. Principio Rector de Minimización de Datos</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">ART. 01</span>
                     </h2>
                     <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                        En <strong>ColorHide: Hide & Seek</strong>, desarrollado por <strong>Craft Garage</strong>, la privacidad es una prioridad central. Operamos bajo el principio estricto de <strong>Minimización de Datos</strong>.
+                        Craft Garage implementa en el desarrollo del Software el principio técnico y jurídico de <strong>Minimización de Datos</strong>. En virtud de este estándar:
+                    </p>
+                    <ul class="list-disc list-inside text-xs text-slate-600 space-y-2 mb-3">
+                        <li>No se exige registro previo, creación de cuenta ni asociación de perfiles en plataformas de terceros o redes sociales.</li>
+                        <li>No se recopila Información de Identificación Personal (PII) directa, tales como nombres, documentos de identidad, números telefónicos o listas de contactos.</li>
+                        <li>No se requiere autenticación basada en datos personales para el uso pleno de las funcionalidades de la aplicación.</li>
+                    </ul>
+                </section>
+
+                <!-- ARTICULO 2 -->
+                <section id="art-2" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <h2 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
+                        <span>Cláusula 2. Categorías de Información y Datos Técnicos Procesados</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">ART. 02</span>
+                    </h2>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Para la correcta sincronización multijugador y la ejecución de la mecánica de camuflaje en tiempo real, el Software procesa de forma exclusivamente local los siguientes parámetros técnicos:
+                    </p>
+                    <div class="space-y-3 text-xs text-slate-700">
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                            <strong class="text-slate-900 block mb-1">A. Parámetros de Enrutamiento Local:</strong>
+                            <span class="text-slate-600">Dirección IP privada asignada al dispositivo por el enrutador de red local (LAN/Wi-Fi), requerida para el protocolo de enlace entre el host y los clientes.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                            <strong class="text-slate-900 block mb-1">B. Identificadores Temporales de Red:</strong>
+                            <span class="text-slate-600">Identificadores numéricos generados aleatoriamente en la memoria de trabajo para asignar roles de juego (Cazador o Presa) durante la sesión activa.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                            <strong class="text-slate-900 block mb-1">C. Datos de Interacción Gráfica:</strong>
+                            <span class="text-slate-600">Coordenadas de trazo y datos cromáticos aplicados sobre la malla tridimensional del personaje para su renderizado sincronizado en los dispositivos participantes.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ARTICULO 3 -->
+                <section id="art-3" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <h2 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
+                        <span>Cláusula 3. Arquitectura de Red de Área Local (LAN) y Ausencia de Servidores Centrales</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">ART. 03</span>
+                    </h2>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                        El modo multijugador opera bajo un esquema peer-to-peer y anfitrión-cliente circunscrito a la infraestructura de red local (Wi-Fi o punto de acceso inalámbrico) de los propios usuarios.
                     </p>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        El juego no requiere cuentas de usuario, inicio de sesión mediante redes sociales, ni la provisión de nombres reales, números telefónicos o correos electrónicos para jugar.
+                        <strong>Garantía de Aislamiento:</strong> Ningún paquete de telemetría de juego, coordenada o dato de transmisión local es transmitido, registrado ni almacenado en servidores centrales o bases de datos externas bajo control de Craft Garage.
                     </p>
                 </section>
 
-                <!-- SECTION 2 -->
-                <section id="sec-2" class="legal-clause bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
-                    <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
-                        <span>2. Categorías de Información Procesada</span>
-                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">CLAUSE-02</span>
+                <!-- ARTICULO 4 -->
+                <section id="art-4" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <h2 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
+                        <span>Cláusula 4. Retención y Volatilidad en Memoria RAM</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">ART. 04</span>
+                    </h2>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                        La totalidad de las variables operativas de la partida reside estrictamente en la memoria de acceso aleatorio (RAM) de los dispositivos vinculados. 
+                    </p>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Dichos datos se purgan y sobrescriben de manera irreversible al concluir la sesión de juego, salir de la sala o forzar el cierre del proceso ejecutable en el sistema operativo.
+                    </p>
+                </section>
+
+                <!-- ARTICULO 5 -->
+                <section id="art-5" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <h2 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
+                        <span>Cláusula 5. Declaración Formal para Tiendas de Aplicaciones (Google Play Data Safety)</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">ART. 05</span>
                     </h2>
                     <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                        Para la correcta ejecución del multijugador y la mecánica de camuflaje visual, se procesan únicamente las siguientes categorías de datos exclusivamente en el dispositivo del usuario y en su red local:
+                        A efectos de la auditoría y cumplimiento del formulario de <em>Seguridad de los Datos</em> requerido por Google Play Store:
                     </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                            <span class="font-bold text-slate-900 block mb-1">A. Datos Técnicos de Red (Local)</span>
-                            <p class="text-slate-600 leading-relaxed">
-                                Dirección IP local asignada por el router Wi-Fi para permitir el descubrimiento y unión de salas entre dispositivos cercanos.
-                            </p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                            <span class="font-bold text-slate-900 block mb-1">B. Identificadores Temporales de Sesión</span>
-                            <p class="text-slate-600 leading-relaxed">
-                                Identificadores numéricos temporales en memoria RAM para sincronizar qué jugador es Cazador y quiénes son Presas.
-                            </p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                            <span class="font-bold text-slate-900 block mb-1">C. Datos Táctiles de Juego (Pintura)</span>
-                            <p class="text-slate-600 leading-relaxed">
-                                Coordenadas táctiles y colores aplicados sobre la textura del personaje para sincronizar el camuflaje en la sala.
-                            </p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                            <span class="font-bold text-slate-900 block mb-1">D. Rendimiento de Hardware</span>
-                            <p class="text-slate-600 leading-relaxed">
-                                Tasa de cuadros (FPS) y resolución de pantalla detectadas por el motor para ajustar la fluidez gráfica.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- SECTION 3 -->
-                <section id="sec-3" class="legal-clause bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
-                    <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
-                        <span>3. Arquitectura Multijugador en Red Local (LAN)</span>
-                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">CLAUSE-03</span>
-                    </h2>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                        El juego opera bajo un modelo de red <strong>Host-Client (Anfitrión-Cliente)</strong> dentro del perímetro Wi-Fi del usuario.
-                    </p>
-
-                    <div class="p-4 rounded-xl bg-blue-50/60 border border-blue-200 text-xs text-blue-900 space-y-2">
-                        <div class="font-bold flex items-center">
-                            <span class="mr-2">🌐</span>
-                            <span>Garantía de Enrutamiento Local Privado:</span>
-                        </div>
-                        <p class="leading-relaxed">
-                            Los paquetes de movimiento y pintura no viajan hacia servidores centrales ni bases de datos en la nube. La comunicación ocurre directamente entre los teléfonos o tabletas conectados al mismo router o zona Wi-Fi.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- SECTION 4 -->
-                <section id="sec-4" class="legal-clause bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
-                    <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
-                        <span>4. Ciclo de Vida y Almacenamiento en Memoria RAM</span>
-                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">CLAUSE-04</span>
-                    </h2>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                        <strong>ColorHide</strong> no mantiene registros históricos ni almacena perfiles en servidores permanentes.
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                        <div class="md:col-span-6">
-                            <div class="chart-container">
-                                <canvas id="storageChart"></canvas>
-                            </div>
-                        </div>
-                        <div class="md:col-span-6 space-y-3 text-xs text-slate-600">
-                            <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-200 text-emerald-900">
-                                <strong>Memoria RAM Volátil (100%):</strong> Los trazos de pintura, posiciones y temporizadores residen en la RAM únicamente mientras la partida está activa.
-                            </div>
-                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-                                <strong>Almacenamiento en Nube (0%):</strong> Al cerrar la aplicación, la memoria asignada se libera automáticamente y de forma irreversible.
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- SECTION 5 -->
-                <section id="sec-5" class="legal-clause bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
-                    <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
-                        <span>5. Declaración de Seguridad de Datos (Google Play Data Safety)</span>
-                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">CLAUSE-05</span>
-                    </h2>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                        Información sobre el tratamiento de datos para la ficha de Google Play:
-                    </p>
-
-                    <div class="overflow-x-auto">
+                    <div class="overflow-x-auto border border-slate-200 rounded-lg">
                         <table class="w-full text-left border-collapse text-xs">
                             <thead>
                                 <tr class="bg-slate-100 text-slate-700 border-b border-slate-200">
-                                    <th class="p-3 font-bold">Tipo de Dato</th>
-                                    <th class="p-3 font-bold">¿Se Recopila?</th>
-                                    <th class="p-3 font-bold">¿Se Comparte con Terceros?</th>
-                                    <th class="p-3 font-bold">Propósito de Uso</th>
+                                    <th class="p-3 font-semibold">Tipo de Información</th>
+                                    <th class="p-3 font-semibold">Recopilación Externa</th>
+                                    <th class="p-3 font-semibold">Transferencia a Terceros</th>
+                                    <th class="p-3 font-semibold">Finalidad Técnica</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-slate-100">
+                            <tbody class="divide-y divide-slate-100 text-slate-600">
                                 <tr>
-                                    <td class="p-3 font-medium text-slate-900">Datos Personales (Nombre, Email)</td>
-                                    <td class="p-3 text-red-600 font-bold">NO</td>
-                                    <td class="p-3 text-slate-500">No aplica</td>
-                                    <td class="p-3 text-slate-500">Ninguno</td>
+                                    <td class="p-3 font-medium text-slate-900">Datos Personales y de Contacto</td>
+                                    <td class="p-3 font-semibold text-slate-500">No recopilada</td>
+                                    <td class="p-3">No aplica</td>
+                                    <td class="p-3">Inexistente</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 font-medium text-slate-900">Ubicación Precisa (GPS)</td>
-                                    <td class="p-3 text-red-600 font-bold">NO</td>
-                                    <td class="p-3 text-slate-500">No aplica</td>
-                                    <td class="p-3 text-slate-500">Ninguno</td>
+                                    <td class="p-3 font-medium text-slate-900">Geolocalización Precisa (GPS)</td>
+                                    <td class="p-3 font-semibold text-slate-500">No recopilada</td>
+                                    <td class="p-3">No aplica</td>
+                                    <td class="p-3">Inexistente</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 font-medium text-slate-900">Dirección IP Local / Sockets</td>
-                                    <td class="p-3 text-emerald-600 font-bold">SÍ (Local)</td>
-                                    <td class="p-3 text-slate-700 font-medium">NO (Solo en la red LAN)</td>
-                                    <td class="p-3 text-slate-600">Multijugador Local</td>
+                                    <td class="p-3 font-medium text-slate-900">Dirección IP Privada de Red</td>
+                                    <td class="p-3 font-semibold text-slate-900">Procesamiento Local</td>
+                                    <td class="p-3 font-semibold text-slate-500">No transferida</td>
+                                    <td class="p-3">Interconexión LAN / Sockets de Red</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 font-medium text-slate-900">Archivos, Fotos o Contactos</td>
-                                    <td class="p-3 text-red-600 font-bold">NO</td>
-                                    <td class="p-3 text-slate-500">No aplica</td>
-                                    <td class="p-3 text-slate-500">Ninguno</td>
+                                    <td class="p-3 font-medium text-slate-900">Archivos, Fotos o Almacenamiento</td>
+                                    <td class="p-3 font-semibold text-slate-500">No recopilada</td>
+                                    <td class="p-3">No aplica</td>
+                                    <td class="p-3">Inexistente</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </section>
 
-                <!-- SECTION 6 -->
-                <section id="sec-6" class="legal-clause bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
-                    <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
-                        <span>6. Permisos Técnicos del Dispositivo</span>
-                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">CLAUSE-06</span>
+                <!-- ARTICULO 6 -->
+                <section id="art-6" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <h2 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
+                        <span>Cláusula 6. Permisos Requeridos del Dispositivo</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">ART. 06</span>
                     </h2>
-                    <ul class="space-y-3 text-xs text-slate-700">
-                        <li class="flex items-start">
-                            <span class="font-mono bg-slate-100 text-slate-800 px-2 py-0.5 rounded mr-3 font-bold">INTERNET</span>
-                            <span>Requerido para abrir sockets de red local entre el anfitrión y los clientes en la partida.</span>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                        El Software solicita exclusivamente los privilegios técnicos indispensables para su ejecución:
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-700">
+                        <li class="p-2.5 bg-slate-50 border border-slate-200 rounded">
+                            <code class="font-bold text-slate-900 font-mono">android.permission.INTERNET</code>: Habilita la apertura de sockets TCP/UDP para el intercambio de información en la red interna local.
                         </li>
-                        <li class="flex items-start">
-                            <span class="font-mono bg-slate-100 text-slate-800 px-2 py-0.5 rounded mr-3 font-bold">ACCESS_WIFI_STATE / ACCESS_NETWORK_STATE</span>
-                            <span>Permite a la aplicación verificar la conexión a la red local antes de crear o unirse a una sala.</span>
+                        <li class="p-2.5 bg-slate-50 border border-slate-200 rounded">
+                            <code class="font-bold text-slate-900 font-mono">android.permission.ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE</code>: Permite al cliente detectar el estado de la conexión Wi-Fi previo a la creación o unión a partidas.
                         </li>
                     </ul>
                 </section>
 
-                <!-- SECTION 7 -->
-                <section id="sec-7" class="legal-clause bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
-                    <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
-                        <span>7. Proveedores de Publicidad y Motor de Juego</span>
-                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">CLAUSE-07</span>
+                <!-- ARTICULO 7 -->
+                <section id="art-7" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <h2 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
+                        <span>Cláusula 7. Servicios de Terceros y Redes Publicitarias</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">ART. 07</span>
                     </h2>
                     <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                        El juego puede integrar los servicios publicitarios de <strong>Google AdMob</strong> para sustentar su desarrollo. AdMob puede utilizar identificadores anónimos de publicidad del dispositivo según las políticas oficiales de Google. Para más información, consulte la <a href="https://policies.google.com/technologies/ads" target="_blank" class="text-emerald-600 hover:underline font-bold">Política de Publicidad de Google</a>.
+                        El Software puede implementar el Kit de Desarrollo de Software (SDK) de <strong>Google AdMob</strong> con propósitos de monetización y soporte del producto. 
                     </p>
-                </section>
-
-                <!-- SECTION 8 -->
-                <section id="sec-8" class="legal-clause bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
-                    <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
-                        <span>8. Protección Infantil (COPPA y GDPR-K)</span>
-                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">CLAUSE-08</span>
-                    </h2>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                        <strong>ColorHide: Hide & Seek</strong> está catalogado como apto para todo público. Cumplimos rigurosamente con <strong>COPPA</strong> y la normativa europea. No recopilamos información personal de menores de 13 años ni integramos chats de texto públicos con desconocidos.
-                    </p>
-                </section>
-
-                <!-- SECTION 9 -->
-                <section id="sec-9" class="legal-clause bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
-                    <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
-                        <span>9. Derechos del Usuario y Eliminación de Datos</span>
-                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">CLAUSE-09</span>
-                    </h2>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        Dado que no se almacenan perfiles en bases de datos externas, cualquier dato o preferencia local se elimina de manera instantánea y definitiva <strong>desinstalando la aplicación</strong> desde los ajustes de su dispositivo.
+                        Dichos servicios pueden recopilar y procesar identificadores seudónimos del dispositivo (como el ID de publicidad de Android o IDFA) de acuerdo con las normativas de privacidad de Google LLC. Para obtener información detallada respecto al tratamiento publicitario, consulte la <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" class="text-slate-900 font-semibold underline hover:text-slate-700">Política de Publicidad de Google</a>.
                     </p>
                 </section>
 
-                <!-- SECTION 10 -->
-                <section id="sec-10" class="legal-clause bg-slate-900 text-white p-6 sm:p-8 rounded-2xl shadow-md border border-slate-800">
-                    <h2 class="text-lg font-bold text-emerald-400 border-b border-slate-800 pb-3 mb-4 flex items-center justify-between">
-                        <span>10. Contacto Formal de Privacidad</span>
-                        <span class="text-xs bg-slate-800 text-slate-300 font-mono px-2 py-0.5 rounded">CLAUSE-10</span>
+                <!-- ARTICULO 8 -->
+                <section id="art-8" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <h2 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
+                        <span>Cláusula 8. Cumplimiento de Normativas de Protección Infantil</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">ART. 08</span>
                     </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                        <div class="p-4 bg-slate-800/80 rounded-xl border border-slate-700">
-                            <span class="text-slate-400 block mb-1">Correo de Contacto y Soporte</span>
-                            <a href="mailto:devcraftcontacto@gmail.com" class="text-emerald-400 font-bold text-sm hover:underline">devcraftcontacto@gmail.com</a>
-                        </div>
-                        <div class="p-4 bg-slate-800/80 rounded-xl border border-slate-700">
-                            <span class="text-slate-400 block mb-1">Desarrollador Oficial</span>
-                            <span class="text-white font-bold text-sm">Craft Garage</span>
-                        </div>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                        En estricto cumplimiento de la Ley de Protección de la Privacidad Infantil en Línea (COPPA) de los Estados Unidos y del marco de protección a menores del Reglamento General de Protección de Datos (GDPR) de la Unión Europea:
+                    </p>
+                    <ul class="list-disc list-inside text-xs text-slate-600 space-y-1.5">
+                        <li>El Software no solicita, almacena ni transfiere información identificativa de menores de 13 años.</li>
+                        <li>La aplicación no incluye módulos de mensajería abierta, chats no moderados ni mecanismos que faciliten la interacción con usuarios externos a la red local configurada.</li>
+                    </ul>
+                </section>
+
+                <!-- ARTICULO 9 -->
+                <section id="art-9" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <h2 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
+                        <span>Cláusula 9. Ejercicio de Derechos y Supresión de Registros</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-mono px-2 py-0.5 rounded">ART. 09</span>
+                    </h2>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                        Al no existir bases de datos centrales ni cuentas de usuario vinculadas a identidades reales, la revocación de cualquier autorización y la eliminación íntegra de configuraciones locales se efectúa mediante la <strong>desinstalación del Software</strong> del dispositivo móvil.
+                    </p>
+                </section>
+
+                <!-- ARTICULO 10 -->
+                <section id="art-10" class="bg-slate-900 text-white p-6 sm:p-8 rounded-xl shadow-sm border border-slate-800">
+                    <h2 class="text-base font-bold text-white border-b border-slate-800 pb-3 mb-4 flex items-center justify-between">
+                        <span>Cláusula 10. Canal Formal de Contacto y Representación</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 font-mono px-2 py-0.5 rounded">ART. 10</span>
+                    </h2>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                        Para la atención de consultas, solicitudes formales relativas a la presente Política de Privacidad o reportes técnicos, puede comunicarse a través del canal oficial de soporte:
+                    </p>
+                    <div class="p-4 bg-slate-800/80 rounded-lg border border-slate-700 inline-block text-xs">
+                        <span class="text-slate-400 block mb-1">Dirección de Correo Electrónico de Soporte Legal:</span>
+                        <a href="mailto:devcraftcontacto@gmail.com" class="text-white font-bold hover:underline">devcraftcontacto@gmail.com</a>
                     </div>
                 </section>
 
@@ -370,55 +285,18 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 border-t border-slate-800 text-slate-400 text-xs py-8 mt-12 no-print">
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-500 text-xs py-8 mt-12 no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
-                © 2026 <strong>Craft Garage</strong>. Todos los derechos reservados.
+                &copy; 2026 <strong>Craft Garage</strong>. Todos los derechos reservados.
             </div>
-            <div class="flex space-x-6 text-slate-300">
-                <a href="index.html" class="hover:text-emerald-400 transition">Inicio</a>
-                <a href="terms.html" class="hover:text-emerald-400 transition">Términos</a>
-                <a href="mailto:devcraftcontacto@gmail.com" class="hover:text-emerald-400 transition">Contacto</a>
+            <div class="flex space-x-6 text-slate-400">
+                <a href="index.html" class="hover:text-white transition">Inicio</a>
+                <a href="terms.html" class="hover:text-white transition">Términos y Condiciones</a>
+                <a href="mailto:devcraftcontacto@gmail.com" class="hover:text-white transition">Contacto</a>
             </div>
         </div>
     </footer>
 
-    <!-- Script Chart -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const ctx = document.getElementById('storageChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Memoria RAM Local (Volátil)', 'Almacenamiento Servidor Nube'],
-                    datasets: [{
-                        data: [100, 0],
-                        backgroundColor: ['#16a34a', '#dc2626'],
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: { font: { size: 11, family: 'sans-serif' }, boxWidth: 12 }
-                        }
-                    },
-                    cutout: '72%'
-                }
-            });
-        });
-
-        function filterClauses() {
-            const input = document.getElementById('searchClauseInput').value.toLowerCase();
-            const clauses = document.querySelectorAll('.legal-clause');
-            clauses.forEach(clause => {
-                const text = clause.innerText.toLowerCase();
-                clause.style.display = text.includes(input) ? 'block' : 'none';
-            });
-        }
-    </script>
 </body>
 </html>
